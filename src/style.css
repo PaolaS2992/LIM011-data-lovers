@@ -1,0 +1,114 @@
+body{
+    background-image: url("./imagenes/pokemonmon.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color:aqua;
+    height: 100vh;
+}
+header{
+    margin-bottom: 40px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.logo-cabecera-pokemon{
+    display: flex;
+    display: block;
+    width: 360px;
+    height: 160px;
+    margin: auto;
+    margin-top: 15px;
+}
+.insertar-pokemones{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tarjeta-pokemon{
+    background-color:rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    border-radius: 20px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tarjeta-pokemon:hover{
+    transform: scale(1.1,1.1);
+    transition-duration: 300ms;
+}
+.imagen-pokemon{
+    margin-left: 40px;    
+}
+.nombre-pokemon{
+    font-size: 18px;
+    text-align: center;
+}
+.numero-pokemon{
+    text-align: center;
+}
+.datos-alternativos{
+    text-align: center;
+    color: rgb(32, 32, 32);
+    font-size: 18px;
+}
+.datos-alternativos-img{
+    display: block;
+    margin: auto;
+    width: 160px;
+}
+.flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(138, 212, 241, 0.7);
+}
+.contenido-modal{
+    position: relative;
+    background-image: url(./imagenes/paipos.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:rgba(236, 225, 225, 0.3);
+    margin: auto;
+    width: 75%;
+    border-radius:30px;
+    animation-name: modal;
+    animation-duration: 1s;
+}
+@keyframes modal{
+    from{top:-400px; opacity: 0;}
+    to{top:0; opacity: 1;}
+}
+.close{
+    color: white;
+    font-size: 60px;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.body-modal{
+    padding: 20px 16px;    
+}
+
+@media(max-width: 768px){
+    .logo-cabecera-pokemon{
+        width: 200px;
+        height: 100px;        
+    }
+}
+

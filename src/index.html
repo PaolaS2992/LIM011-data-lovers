@@ -8,7 +8,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <header>
+      <figure>
+          <img class="logo-cabecera-pokemon" src="./imagenes/pokelogo.png">
+      </figure>      
+    </header>
+    <main>
+        <div class="insertar-pokemones" id="insertar-pokemones"></div>
+        <section>
+          <div class="modal" id="modal">
+            <div class="flex" id="flex">
+              <div class="contenido-modal">
+                <div class="header-modal flex">
+                  <span class="close" id="close">&times;</span>
+                </div>
+                <div class="body-modal">                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://www.facebook.com/PokemonGO/" title="Facebook PokemonGo" target="_blank"> <img src="./imagenes/facebook.png" alt="Facebook"> </a>
+        <a href="https://www.instagram.com/pokemongoapp/" title="Instagram PokemonGo" target="_blank"> <img src="./imagenes/instagram.png" alt="Instagram"> </a>
+        <a href="https://twitter.com/pokemongoapp?lang=es" title="Twitter PokemonGo" target="_blank"> <img src="./imagenes/twitter.png" alt="Twitter"> </a>
+    </footer>    
     <script type="module" src="main.js"></script>
   </body>
 </html>
+

@@ -18,13 +18,12 @@
     </header>
     <!--search-->
         <form class="fomulario-nombre">
-                <input type="text" id="nombre-pokemon" value="" placeholder="Busca un pokemon" name="search" />
+                <input type="text" id="nombre-pokemon" value="" placeholder="Busca un pokemon"/>
         </form>
     <div id="siderbar">
         <div class="toglee">
                 <span class="menu">&#9776;</span>    
         </div>
-        <!--search-->
         <ul>
                 
             <form id="filtros">
@@ -32,17 +31,17 @@
                 <!-- <li><button id="inicio">Mostrar todos</button></li> -->                
 
                 <li>
-                    <select id="filtro-distancia" class="filtro-distancia">
-                        <option disabled selected>Huevo</option> 
-                        <option value="Not in Eggs">Not in Eggs</option>
-                        <option value="2 km">2 km</option>
-                        <option value="5 km">5 km</option>
-                        <option value="10 km">10 km</option>
-                    </select>
+                        <select id="filtro-distancia" class="filtro-distancia">
+                                <option disabled selected>Huevo</option> 
+                                <option value="Not in Eggs">Not in Eggs</option>
+                                <option value="2 km">2 km</option>
+                                <option value="5 km">5 km</option>
+                                <option value="10 km">10 km</option>
+                        </select>
                 </li>
                 <li>
                         <select name="" id="ordenAlfNum">
-                                <option disabled selected>Orden Alfabetico</option>
+                                <option disabled selected>Orden</option>
                                 <option value="A-Z">A-Z</option>
                                 <option value="Z-A">Z-A</option>
                                 <option value="ASC">Ascendente</option>
@@ -73,8 +72,10 @@
                         </select>
                     </li>
             </form>
-            <li><button id="mayor-frecuencia" value="MAYORF"><img src="./imagenes/top10.jpg" alt="TOP 10" width="100px"></button></li>
-                <li> <p>Tipos</p></li>
+                 <li>
+                        <button id="mayor-frecuencia" value="MAYORF"><img src="./imagenes/top10.jpg" alt="TOP 10" width="100px"></button>
+                </li>
+                <li> <p>Tipos:</p></li>
                 <li>
                     <section id="guia-tipos" class="guia-tipos">
                         <button id="aire" class="aire"> 

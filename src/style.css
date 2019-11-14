@@ -1,12 +1,12 @@
 body{
     background-image: url("./imagenes/pokemonmon.png");
     background-repeat: no-repeat; 
-    background-position: center center; /* centra la imagen en sus dos ejes, sirve para el responsive*/
-    background-attachment: fixed; /*mantiene fija la imagen*/
-    background-size: cover; /*completa la imagen en toda la pantalla*/
+    background-position: center center; 
+    background-attachment: fixed; 
+    background-size: cover; 
     background-color:aqua;
     font-family: 'Montserrat', sans-serif;
-    /*padding-top: 150px;*/
+ 
 }
 header{
     margin-bottom: 40px;
@@ -22,7 +22,7 @@ a.twitter{
     margin-left: 10px;
 }
 .logo-cabecera-pokemon{
-    display: flex; /*lo hace flexible y responsive*/
+    display: flex; 
     display: block;
     width: 360px;
     height: 160px;
@@ -36,10 +36,11 @@ a.twitter{
 #siderbar{
     font-family: 'Montserrat', sans-serif;
     position: absolute;
-    width: 250px;
+    margin-top: -50px;
+    width: 260px;
     height: 120%;
     background: rgba(222, 222, 228, 0.9);
-    left: -250px;
+    left: -260px;
     transition: all 500ms linear;
     border-radius: 10px;
 }
@@ -47,7 +48,7 @@ a.twitter{
     left: 0;
 }
 #siderbar ul li{
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     flex-wrap: wrap;
     padding: 5px 10px;
@@ -55,7 +56,7 @@ a.twitter{
 }
 .toglee{
     position: absolute;
-    left: 260px;
+    left: 270px;
     top: -30px;
     cursor: pointer;
 }
@@ -68,7 +69,7 @@ a.twitter{
 }
 .insertar-pokemones{
     display: flex;
-    flex-wrap: wrap; /*hace que los pokemones esten en linea*/
+    flex-wrap: wrap; 
 }
 .tarjeta-pokemon{
     background-color:rgba(0, 0, 0, 0.1);
@@ -94,23 +95,16 @@ a.twitter{
 .numero-pokemon{
     text-align: center;
 }
-.huevo-pokemon{
-    text-align: center;
-    font-size: 15px;
-}
 .datos-alternativos{
    text-align: center;
-   color: rgb(32, 32, 32);
-   font-size: 16px;
+   color: rgb(100, 98, 98);
+   font-size: 18px;
+   font-weight: bold;
 }
 .datos-alternativos-img{
     display: block;
-    width: 160px;
-}
-.datos-alternativosD{
-    text-align: center;
-    color: rgb(32, 32, 32);
-    font-size: 12px;
+    width: 130px;
+    margin: auto;
 }
 button.aire,
 button.electrico,
@@ -132,7 +126,7 @@ button.veneno
     border: none;
     margin: 5px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: lighter;
     color: rgb(66, 65, 65);
 }
@@ -157,8 +151,8 @@ button.veneno:hover{
     
 }
 .btn{ 
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     margin-left: 15px;
 }
 .guia-tipos{
@@ -172,11 +166,68 @@ button.veneno:hover{
     justify-content: center;
     align-items: center;
 }
+#nombre-pokemon{
+   height: 20px;
+}
+/*Modal*/
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(75, 80, 82, 0.7);
+}
+.contenido-modal{
+    position: relative;
+    background-image: url(./imagenes/paipos.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:rgba(236, 225, 225, 0.3);
+    margin: auto;
+    width: 75%;
+    border-radius:30px;
+    animation-name: modal;
+    animation-duration: 1s;
+   /*margin-top: 150px;*/ 
+}
+@keyframes modal{
+    from{top:-400px; opacity: 0;}
+    to{top:0; opacity: 1;}
+}
 
+.cerrar{
+    color: rgb(250, 241, 241);
+    font-size: 60px;
+    font-weight: bolder;
+    margin-left: 10px;
+    cursor: pointer;  
+}
+.modal-open{
+    display: block;
+}
+.flex{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-body{
+    padding:  20px 16px;
+}
+#mayor-frecuencia{
+    background: none;
+    border: none; 
+}
 @media(max-width: 768px){
     .logo-cabecera-pokemon{
         width: 200px;
         height: 100px;        
     }
 }
+
 

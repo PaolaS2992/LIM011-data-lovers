@@ -1,3 +1,4 @@
+// Minidata
 export const traerDataMap2 = (arr) => arr.map((ele) => {
   const obj = {
     identificador: ele.id,
@@ -15,17 +16,17 @@ export const traerDataMap2 = (arr) => arr.map((ele) => {
   };
   return obj;
 });
-// huevos
+// Filtro Huevos
 export const filtroHuevo = (array, distancia) => {
   const nuevoArray = array.filter((objeto) => objeto.huevo === distancia);
   return nuevoArray;
 };
-// debilidades
+// Filtro debilidades y tipo
 export const filtroDebilidadTipo = (array, propiedad, valor) => {
-  const newArray = []
+  const newArray = [];
   array.forEach((objeto) => {
     objeto[propiedad].forEach((string) => {
-      if(string === valor) { 
+      if (string === valor) {
         newArray.push(objeto);
       }
     });
@@ -33,23 +34,19 @@ export const filtroDebilidadTipo = (array, propiedad, valor) => {
   return newArray;
 };
 
-// nombre
+// filtro buscador por nombre
 export const buscarPorNombre = (array, nombre) => {
   const nuevoArraysss = array.filter((objeto) => objeto.nombre.toLowerCase().startsWith(nombre));
   return nuevoArraysss;
 };
 
-// 003: FILTRO POR ORDEN ALFABETICO Y NUMERICO.
+// Filtro orden alfabetico, orden asc - desc y top
+// eslint-disable-next-line arrow-body-style
 export const ordenAlfNum = (arr, propiedad) => {
-  return arr.sort((a, b) => {
-      if(a[propiedad] < b[propiedad]) return -1;
-      if(a[propiedad] > b[propiedad]) return 1;
-      return 0;
-    }); 
+  return arr.sort((a, b) => (a[propiedad] < b[propiedad] ? -1 : 1));
 };
 
-// 005: TOP 10 DE FRECUENCIA DE APARICIÓN.
-
+// SELECCIONANDO STRING.
 export const AsDes = (data, string) => {
   switch (string) {
     case 'A-Z':
@@ -61,8 +58,8 @@ export const AsDes = (data, string) => {
     case 'DESC':
       return ordenAlfNum(data, 'numero').reverse();
     case 'MAYORF':
-      return ordenAlfNum(data, 'frecuencia').slice(0,10);
+      return ordenAlfNum(data, 'frecuencia').slice(0, 10);
     default:
       break;
   }
-}
+};

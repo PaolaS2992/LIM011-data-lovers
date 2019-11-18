@@ -19,10 +19,10 @@ Este proyecto permite al usuario visualizar a los 151 Pokémon de la región Kan
 ## 2. Imagen final del proyecto
 ### 2.1 . Desktop
 
-![](src\imagenes\pantallafinal1.jpg)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/pantallafinal1.jpg)
 
 ### 2.2. Mobile
-![](src\imagenes\pantallamovil.jpg)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/pantallamovil.jpg)
 ***
 
 ## 3. Investigación UX
@@ -75,23 +75,23 @@ hicimos una rápida investigación (research) y estos son algunos de los hallazg
 
 ### 4.1. Desktop
 
-![](src\imagenes\escritorio1.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio1.png)
 
-![](src\imagenes\escritorio3.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio3.png)
 
-![](src\imagenes\escritorio2.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio2.png)
 
-![](src\imagenes\escritorio4.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio4.png)
 
 ### 4.2. Mobile
 
-![](src\imagenes\celularpapel1.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel1.png)
 
-![](src\imagenes\celularpapel2.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel2.png)
 
-![](src\imagenes\celularpapel3.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel3.png)
 
-![](src\imagenes\celularpapel4.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel4.png)
 ***
 ## 5. Feedback
 ***
@@ -99,13 +99,13 @@ hicimos una rápida investigación (research) y estos son algunos de los hallazg
 
 ### 6.1. Desktop
 
-![](src\imagenes\figmaescritorio.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/figmaescritorio.png)
 
 \* Puedes ver el prototipo desktop completo en este [link](https://www.figma.com/proto/AD7dxL6NzPTDVg1AFfpQKC/POKE?node-id=2%3A2&scaling=min-zoom)
 
 ### 6.2. Mobile
 
-![](src\imagenes\figmacelular.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/figmacelular.png)
 
 \* Puedes ver el prototipo mobile completo en este [link](https://www.figma.com/proto/8QId6tCu6gQDM7UdPdSz0E/POKE-CELULAR?node-id=1%3A2&scaling=min-zoom)
 

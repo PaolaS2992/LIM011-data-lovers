@@ -35,8 +35,8 @@ export const filtroDebilidadTipo = (array, propiedad, valor) => {
 };
 
 // filtro buscador por nombre
-export const buscarPorNombre = (array, nombre) => {
-  const nuevoArraysss = array.filter((objeto) => objeto.nombre.toLowerCase().startsWith(nombre));
+export const buscarPorNombre = (array, nombres) => {
+  const nuevoArraysss = array.filter((objeto) => (objeto.nombre).toLowerCase().startsWith(nombres));
   return nuevoArraysss;
 };
 
@@ -47,6 +47,7 @@ export const ordenAlfNum = (arr, propiedad) => {
 };
 
 // SELECCIONANDO STRING.
+// eslint-disable-next-line consistent-return
 export const AsDes = (data, string) => {
   switch (string) {
     case 'A-Z':
@@ -59,7 +60,6 @@ export const AsDes = (data, string) => {
       return ordenAlfNum(data, 'numero').reverse();
     case 'MAYORF':
       return ordenAlfNum(data, 'frecuencia').slice(0, 10);
-    default:
-      break;
+      // no default
   }
 };

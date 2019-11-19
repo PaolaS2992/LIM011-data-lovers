@@ -62,30 +62,30 @@ Dentro de la investigación encontramos lo siguiente:
 
 ### 4.1. Desktop
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio1.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio1.jpeg)
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio3.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio2.jpeg)
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio2.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio3.jpeg)
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio4.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio4.jpeg)
 
 ### 4.2. Mobile
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel1.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel1.jpeg)
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel2.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel2.jpeg)
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel3.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel3.jpeg)
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel4.png)
+![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel4.jpeg)
 ***
 ## 5. Feedback
 Testeamos el prototipo de baja fidelidad con 5 usuarios y se realizaron los siguientes cambios:
 
 * Eliminar los botones de tipo de Pokemon que estaban en la parte superior de la pantalla ya que los usuarios encontraron la primera pantalla muy recargada de información.
 * Crear un menú desplegable en donde se ubicaban las opciones de filtrado y tipo de Pokemon, ya que los usuarios estaban acostumbrados a este tipo de menú y hacía que la primera página de la web se vea más ordenada.
-*  El usuario a primera vista identifico el listado de Pokemones y su información detallada, tuvo alguna dificultad con el buscador y el idioma ya que identifico que en su mayoría el contenido estaba en Ingles y las opciones de filtrado en Español, sin embargo, al descubrir el bloque de opciones de filtrado y ordenado de cada Pokemon pudo identificar y clasificar a cada Pokemon.
+*  El usuario identificó el listado de Pokemones y su información detallada, tuvo alguna dificultad con el buscador y el idioma ya que en su mayoría el contenido estaba en ingles y las opciones de filtrado en español, sin embargo, al descubrir el bloque de opciones de filtrado y ordenado de cada Pokémon pudo identificar y clasificar a cada Pokemon.
 ***
 ## 6. Prototipo en Figma
 

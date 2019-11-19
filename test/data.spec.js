@@ -1,6 +1,5 @@
-// importamos la función `example`
 import {
-  filtroHuevo, filtroDebilidadTipo, buscarPorNombre, AsDes, traerDataMap2,
+  filtroHuevo, filtroDebilidadTipo, buscarPorNombre, AsDes, traerDataMap2, evolutions,
 } from '../src/data';
 
 describe('traerDataMap2', () => {
@@ -77,5 +76,24 @@ describe('AsDes', () => {
     expect(AsDes(dataOrdenar, 'ASC')).toEqual(ascendente);
     expect(AsDes(dataOrdenar, 'DESC')).toEqual(descendente);
     expect(AsDes(dataOrdenar, 'MAYORF')).toEqual(frecuencia);
+  });
+});
+
+describe('Filtro por Evoluciones', () => {
+  it('Deberia ser una funcion', () => {
+    expect(typeof evolutions).toBe('function');
+  });
+  const dataIngreso = [{ identificador: 1, nombre: 'Bulbasaur', Siguiente: [{ num: '002', name: 'Ivysaur' }, { num: '003', name: 'Venusaur' }] }];
+  it('Deberia filtrar => EVOLUCIONES', () => {
+    const dataSalida = [{ num: '002', name: 'Ivysaur', label: 'Siguiente' }, { num: '003', name: 'Venusaur', label: 'Siguiente' }];
+    expect(evolutions(dataIngreso, 'Siguiente', 1)).toEqual(dataSalida);
+  });
+  it('Deberia filtrar => EVOLUCIONES VACIAS', () => {
+    const dataSalida = [];
+    expect(evolutions(dataIngreso, 'Previo', 1)).toEqual(dataSalida);
+  });
+  it('Deberia filtrar => EVOLUCIONES IDENTIFICADOR', () => {
+    const dataSalida = [];
+    expect(evolutions(dataIngreso, 'Siguiente', '1')).toEqual(dataSalida);
   });
 });

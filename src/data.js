@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 // Minidata
 export const traerDataMap2 = (arr) => arr.map((ele) => {
   const obj = {
@@ -13,6 +14,8 @@ export const traerDataMap2 = (arr) => arr.map((ele) => {
     debilidades: ele.weaknesses,
     huevo: ele.egg,
     frecuencia: ele.avg_spawns,
+    Previo: ele.prev_evolution,
+    Siguiente: ele.next_evolution,
   };
   return obj;
 });
@@ -62,4 +65,21 @@ export const AsDes = (data, string) => {
       return ordenAlfNum(data, 'frecuencia').slice(0, 10);
       // no default
   }
+};
+// FUNCION PARA EVOLUCIONES.
+export const evolutions = (arr, propiedad, num) => {
+  let newArray = [];
+  arr.forEach((objeto) => {
+    if (objeto.identificador === num) {
+      if (objeto[propiedad] === undefined) {
+        newArray = [];
+      } else {
+        objeto[propiedad].forEach((obj) => {
+          obj.label = propiedad;
+          newArray.push(obj);
+        });
+      }
+    }
+  });
+  return newArray;
 };

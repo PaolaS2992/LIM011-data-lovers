@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     background-image: url("./imagenes/pokemonmon.png");
     background-repeat: no-repeat; 
@@ -5,8 +9,7 @@ body{
     background-attachment: fixed; 
     background-size: cover; 
     background-color:aqua;
-    font-family: 'Montserrat', sans-serif;
- 
+    font-family: 'Montserrat', sans-serif; 
 }
 header{
     margin-bottom: 40px;
@@ -16,9 +19,10 @@ footer{
     justify-content: center;
     margin-top: 30px; 
 }
-a.facebook,
-a.instagram,
-a.twitter{
+ul{
+    list-style:none; 
+}
+.redes-sociales{
     margin-left: 10px;
 }
 .logo-cabecera-pokemon{
@@ -28,10 +32,6 @@ a.twitter{
     height: 160px;
     margin: auto; 
     margin-top: 15px;;
-}
-*{
-    margin: 0;
-    padding: 0;
 }
 #siderbar{
     font-family: 'Montserrat', sans-serif;
@@ -57,7 +57,7 @@ a.twitter{
 .toglee{
     position: absolute;
     left: 270px;
-    top: -30px;
+    top: -35px;
     cursor: pointer;
 }
 .menu{
@@ -95,60 +95,20 @@ a.twitter{
 .numero-pokemon{
     text-align: center;
 }
-.datos-alternativos{
-   text-align: center;
-   color: rgb(100, 98, 98);
-   font-size: 18px;
-   font-weight: bold;
-}
-.datos-alternativos-img{
-    display: block;
-    width: 130px;
-    margin: auto;
-}
-button.aire,
-button.electrico,
-button.agua,
-button.dragon,
-button.fantasma,
-button.tierra,
-button.fuego,
-button.insecto,
-button.lucha,
-button.normal,
-button.planta,
-button.hielo,
-button.psiquico,
-button.roca,
-button.veneno
+.btn-tipo
 {
     background: none;
     border: none;
     margin: 5px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 14px;    
     font-weight: lighter;
     color: rgb(66, 65, 65);
 }
-button.aire:hover,
-button.electrico:hover,
-button.agua:hover,
-button.dragon:hover,
-button.fantasma:hover,
-button.tierra:hover,
-button.fuego:hover,
-button.insecto:hover,
-button.lucha:hover,
-button.normal:hover,
-button.planta:hover,
-button.hielo:hover,
-button.psiquico:hover,
-button.roca:hover,
-button.veneno:hover{
+.btn-tipo:hover{
     transform: scale(1.2,1.2);
     transition-timing-function: ease-out;
-    transition-duration: 300ms;
-    
+    transition-duration: 300ms;    
 }
 .btn{ 
     height: 45px;
@@ -167,9 +127,11 @@ button.veneno:hover{
     align-items: center;
 }
 #nombre-pokemon{
-   height: 20px;
+   height: 25px;
+   width: 280px;
+   font-size: 18px;
 }
-/*Modal*/
+/*INICIO MODAL*/
 .modal{
     display: none;
     position: fixed;
@@ -181,34 +143,6 @@ button.veneno:hover{
     height: 100%;
     background: rgba(75, 80, 82, 0.7);
 }
-.contenido-modal{
-    position: relative;
-    background-image: url(./imagenes/paipos.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color:rgba(236, 225, 225, 0.3);
-    margin: auto;
-    width: 75%;
-    border-radius:30px;
-    animation-name: modal;
-    animation-duration: 1s;
-   /*margin-top: 150px;*/ 
-}
-@keyframes modal{
-    from{top:-400px; opacity: 0;}
-    to{top:0; opacity: 1;}
-}
-
-.cerrar{
-    color: rgb(250, 241, 241);
-    font-size: 60px;
-    font-weight: bolder;
-    margin-left: 10px;
-    cursor: pointer;  
-}
-.modal-open{
-    display: block;
-}
 .flex{
     width: 100%;
     height: 100%;
@@ -216,8 +150,99 @@ button.veneno:hover{
     justify-content: space-between;
     align-items: center;
 }
+.contenido-modal{
+    position: relative;
+    background-image: url(./imagenes/paipos.png);
+   /* background: linear-gradient(to bottom, rgb(6, 196, 180), rgb(90, 165, 177), rgb(188, 236, 222)); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:rgba(236, 225, 225, 0.3);
+    margin: auto;
+    width: 35%;
+    border-radius:30px;
+    animation-name: modal;
+    animation-duration: 1s;
+}
+@keyframes modal{
+    from{top:-400px; opacity: 0;}
+    to{top:0; opacity: 1;}
+}
+.cerrar{
+    color: rgb(250, 241, 241);
+    font-size: 60px;
+    font-weight: bolder;
+    margin: 8px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+.modal-open{
+    display: block;
+}
 .modal-body{
-    padding:  20px 16px;
+    display: flex;
+    flex-direction: column;
+}
+.modal-header{
+    text-align: center;
+    padding: 5px;
+    color: rgb(44, 42, 42);
+    font-weight: bolder;
+    font-size: 22px;
+}
+.modal-header img{
+    width: 150px;
+    height: 150px;
+}
+.modal-main{ 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+.columna{
+    padding: 5px;
+    text-align: center; 
+}
+.atributo-titulo{
+    width: 120px;
+    height: 25px;
+    background-color:rgb(27, 112, 56);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    line-height: 27px;
+    margin: auto;
+}
+.atributo-valor{
+    font-weight: bold;
+    line-height: 30px;
+}
+.modal-footer{
+    text-align: center;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;   
+    margin-top: -10px; 
+}
+.evolucion{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.columna-evo{
+    padding: 10px;
+}
+.evolucion figure{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color:rgb(125, 196, 238);
+    margin: auto;
+}
+.imagen-evolucion{
+    width: 100px;
+    height: 100px;
 }
 #mayor-frecuencia{
     background: none;
@@ -227,6 +252,24 @@ button.veneno:hover{
     .logo-cabecera-pokemon{
         width: 200px;
         height: 100px;        
+    }
+}
+@media(max-width: 420px){
+    .contenido-modal{
+        width: 70%;
+    }
+    .evolucion figure{
+        width: 70px;
+        height: 70px;
+        border: white 2px solid;
+        font-size: 6px; 
+    }
+    .evolucion figure img{
+        width: 60px;
+        height: 60px;
+    }
+    .columna-evo{
+        font-size: 12px;
     }
 }
 

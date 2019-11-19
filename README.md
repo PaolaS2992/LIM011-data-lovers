@@ -14,7 +14,8 @@
 
 ## 1. Resumen
 
-Este proyecto permite al usuario visualizar a los 151 Pokémon de la región Kanto, organizados en orden numérico, además también podrá usar filtros avanzados de búsqueda y acceder a más información sobre los Pokémon y mejorar su estrategia de juego en Pokémon Go.
+Este proyecto permite al usuario visualizar a los 151 Pokemones de la región Kanto, organizados en orden numérico. Además, también podrá usar filtros avanzados de búsqueda como de manera ascendente o descendente, por huevos (para conocer los kilometros) y por debilidades. 
+Buscamos que con esta información el usuario pueda mejorar su estrategia de juego en Pokémon Go.
 
 ## 2. Imagen final del proyecto
 ### 2.1 . Desktop
@@ -27,39 +28,24 @@ Este proyecto permite al usuario visualizar a los 151 Pokémon de la región Kan
 
 ## 3. Investigación UX
 
-Pokémon GO es una experiencia de juego internacional que cuenta con más de mil
-millones de descargas y ha sido nombrada "el mejor juego para móviles" por
-Game Developers Choice Awards y "la mejor aplicación del año" por TechCrunch
-(tomado de Google Play). Los usuarios del juego se convierten en "Maestros/
-entrenadores de Pokémon" y pueden:
+Pokémon GO es una experiencia de juego internacional que cuenta con más de mil millones de descargas y una gran comunidad de jugadores que siempre buscan capturar a pokemones únicos, superar desafíos y culminar misiones.
 
-- **Descubrir el mundo Pokémon:** explorar y descubrir nuevos Pokémon allá
-  donde vayan.
-- **Atrapar** distintos Pokémon para completar su Pokédex.
-- **Pelear** contra Pokémon de otros entrenadores y conquistar un gimnasio.
-- **Competir** en épicos combates contra otros entrenadores.
-- **Hacer equipo** con otros entrenadores para atrapar poderosos Pokémon
-  durante las incursiones.
+A fin de poder ayudar a esta gran comunidad de jugadores pensamos en una web que les de información de una manera fácil y rápida sobre sus Pokemones ya que habíamos encontrado  que muchos jugadores consultaban en videos de Youtube y en diversas paginas web sobre como mejorar su juego pero  encontraban una saturación de información que no permitía distinguir a los usuarios lo que realmente necesitaban.
 
-Para entender mejor qué necesidades complementarias a la app tienen los usuarios,
-hicimos una rápida investigación (research) y estos son algunos de los hallazgos.
+Es por ello que creamos POKEDATA, a fin de poder otorgar información rápida y precisa para que los usuarios tomen mejores decisiones en el juego.
 
-- Los Pokémon tienen características únicas que determinan las decisiones que
-  toma el usuario (tipo, debilidad, peso, multiplicador, etc.)
-- Un maestro Pokémon antes de salir a casar los Pokémon tienen que:
-  saber el top 10 de frecuencia de aparición de los Pokémon.
-- Los Pokémon tienen distintos tipos y debilidades de combate. Estas
-  características son importantes cuando un maestro Pokémon elige al Pokémon
-  más adecuado para su batalla. Hay veces que tiene que elegir a los que
-  tienen menos cantidad de debilidades y saber de que tipo son. Por ello, es
-  importante para un maestro Pokémon poder ordenarlos por estas 2
-  características.
+Dentro de la investigación encontramos lo siguiente:
+
+- Los Pokémon tienen características únicas que determinan las decisiones que toma el usuario (tipo, debilidad, peso, multiplicador, etc.)
+- Un maestro Pokémon antes de salir a cazar los Pokémon tiene que saber el top 10 de frecuencia de aparición de los Pokémon.
+- Los Pokémon tienen distintos tipos y debilidades de combate. Estas características son importantes cuando un maestro Pokémon elige al Pokémon más adecuado para su batalla. Hay veces que tiene que elegir a los quetienen menos cantidad de debilidades y saber de que tipo son. Por ello, es importante para un maestro Pokémon poder ordenarlos por estas 2 características.
 - Los Pokémon evolucionan y es importante para un
   maestro Pokémon saber cuántas y cuáles son las evoluciones que tienen antes y después.
-- Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber
-  cuáles tienen caramelos más cercanos para poder enfocarse en conseguirlos.
+- Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber cuáles tienen caramelos más cercanos para poder enfocarse en conseguirlos.
 
   ### 3.1. Historias de usuario
+
+  Teniendo en cuenta la información que valoran nuestros usuarios, creamos las siguientes historias de usuario a fin de organizar mejor el desarrollo de nuestra web:
 
   - Como usuario necesito que se vean todos los Pokémon para visualizarlos en orden numérico.
   - Como usuario necesito ver la información de cada Pokémon a fin de elegir mejor al momento de la batalla.
@@ -67,9 +53,10 @@ hicimos una rápida investigación (research) y estos son algunos de los hallazg
   - Como usuario necesito filtrar a los Pokémon por sus debilidades para elegir al pokémon indicado en una batalla.
   - Como usuario necesito filtrar por huevos para saber cuantos kilómetros debo caminar para eclosionar.
   - Como usuario necesito poder buscar a un pokémon escribiendo su nombre a fin de que sea una búsqueda mucho mas rápida.
-  - Como usuario necesito filtrar por evolución para saber la siguiente evolcuión de un pokémon.
+  
   - Como usuario necesito filtrar por orden alfabetico a fin de realizar una búsqueda ordenada.
   - Como usuario necesito ver la página en distintos dispositivos para mayor comodidad.
+  - Como usuario necesito filtrar por evolución para saber la siguiente evolcuión de un pokémon.
   ***
 ## 4. Prototipo en papel
 
@@ -94,6 +81,11 @@ hicimos una rápida investigación (research) y estos son algunos de los hallazg
 ![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel4.png)
 ***
 ## 5. Feedback
+Testeamos el prototipo de baja fidelidad con 5 usuarios y se realizaron los siguientes cambios:
+
+* Eliminar los botones de tipo de Pokemon que estaban en la parte superior de la pantalla ya que los usuarios encontraron la primera pantalla muy recargada de información.
+* Crear un menú desplegable en donde se ubicaban las opciones de filtrado y tipo de Pokemon, ya que los usuarios estaban acostumbrados a este tipo de menú y hacía que la primera página de la web se vea más ordenada.
+*  El usuario a primera vista identifico el listado de Pokemones y su información detallada, tuvo alguna dificultad con el buscador y el idioma ya que identifico que en su mayoría el contenido estaba en Ingles y las opciones de filtrado en Español, sin embargo, al descubrir el bloque de opciones de filtrado y ordenado de cada Pokemon pudo identificar y clasificar a cada Pokemon.
 ***
 ## 6. Prototipo en Figma
 

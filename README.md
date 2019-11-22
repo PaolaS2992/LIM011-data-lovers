@@ -9,8 +9,144 @@
 * [5. Feedback](#5-feedback)
 * [6. Prototipo en Figma](#6-prototipo-en-figma)
 
-
 ***
+
+## 1. Preámbulo
+
+Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
+el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
+Cada día generamos 2.5 millones de terabytes de datos, una cifra sin precedentes.
+
+No obstante, los datos por sí mismos son de poca utilidad. Para que esas
+grandes cantidades de datos se conviertan en **información** fácil de leer para
+los usuarios, necesitamos entender, procesar y mostrar estos datos. Una manera
+simple de hacerlo es creando _interfaces_ y _visualizaciones_.
+
+En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
+izquierda se puede construir (a la derecha) una interfaz amigable y comprensible
+para el usuario.
+
+![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+
+\* Puedes ver el detalle de la data en este [link](https://gist.github.com/lalogf/dd4aa3017a9f8aa8f90dfbca382c4dc9#file-student-json)
+y la interfaz construida en este [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).
+
+## 2. Resumen del proyecto
+
+En este proyecto **construirás una _página web_ para visualizar un
+_conjunto (set) de datos_** que se adecúe a lo que tu usuario necesita.
+
+Como entregable final tendrás una página web que permita a los usuarios
+**visualizar, filtrar, ordenar, etc.**.
+
+Te proponemos una serie de datos de diferentes _temáticas_ para que los
+explores y decidas con cuál te interesa trabajar. Cada _set_ de datos viene con
+información básica sobre los datos y su estructura, y una lista de las
+necesidades de los usuarios que proviene de una investigación (_research_)
+hecha por el equipo de Laboratoria.
+
+Una vez que elijas, diseña tu proyecto intentando ofrecerle la mejor experiencia
+posible para ayudarle a satisfacer sus necesidades.
+
+### Estos son datos que te proponemos:
+
+* [Pokémon](src/data/pokemon/pokemon.json):
+  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
+  y Johto, junto con sus respectivas estadísticas usadas en el juego
+  [Pokémon GO](http://pokemongolive.com).
+  * [Investigación con jugadores de Pokémon Go](/pokemon/README.md)
+
+* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
+  Este set de datos muestra la lista de campeones en una liga del
+  juego League of Legends (LoL).
+  * [Investigación con jugadores de LoL](/lol/README.md)
+
+* [Harry Potter](src/data/potter/potter.json):
+  Este set de datos muestra la lista de los personajes del mundo de
+  [Harry Potter: Wizards Unite](https://www.wizardingworld.com), junto con sus
+  respectivas características mencionadas en la serie de novelas de Harry Potter
+  escrita por la autora británica J.K.Rowling.
+  * [Investigación con jugadores de Harry Potter: Wizards Unite](/potter/README.md)
+
+
+## 3. Objetivos de aprendizaje
+
+El objetivo principal de este proyecto es que, entendiendo las necesidades de
+tus usuarios, aprendas a diseñar y construir una interfaz web donde se pueda
+visualizar y manipular data.
+
+Revisa la lista y reflexiona sobre los objetivos que conseguiste en el
+proyecto anterior. Piensa en eso al decidir tu estrategia de trabajo individual
+y de equipo.
+
+### UX
+
+- [X] Diseñar la aplicación pensando y entendiendo al usuario.
+- [X] Crear prototipos para obtener _feedback_ e iterar.
+- [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
+- [X] Planear y ejecutar _tests_ de usabilidad.
+
+### HTML y CSS
+
+- [X] Entender y reconocer por qué es importante el HTML semántico.
+- [X] Identificar y entender tipos de selectores en CSS.
+- [X] Entender como funciona `flexbox` en CSS.
+- [X] Construir tu aplicación respetando el diseño planeado (maquetación).
+
+### DOM
+
+- [X] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
+- [X] Manejar eventos del DOM. (addEventListener)
+- [X] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
+
+### Javascript
+
+- [X] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
+- [X] Manipular objects (key | value).
+- [X] Entender el uso de condicionales (`if-else` | `switch`).
+- [X] Entender el uso de bucles (`for` | `forEach`).
+- [ ] Entender la diferencia entre expression y statements.
+- [X] Utilizar funciones (parámetros | argumentos | valor de retorno).
+- [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
+- [X] Utilizar ES Modules (`import` | `export`).
+
+### Pruebas Unitarias (_testing_)
+- [ ] Testear funciones (funciones puras).
+
+### Git y GitHub
+- [X] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
+- [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
+- [ ] Colaborar en Github (pull requests).
+
+### Buenas prácticas de desarrollo
+- [ ] Organizar y dividir el código en módulos (Modularización).
+- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
+- [X] Utilizar linter para seguir buenas prácticas (ESLINT).
+
+## 4. Consideraciones generales
+
+* Este proyecto se debe resolver en duplas.
+* El proyecto será entregado subiendo tu código a GitHub (`commit`/`push`) y la
+  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
+* Tiempo: toma como referencia 3 semanas.
+
+## 5. Criterios de aceptación mínimos del proyecto
+
+Los criterios que deberás considerar para saber si has completado este proyecto
+son:
+
+### Definición del producto
+
+Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
+contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
+el problema (o problemas) que tiene tu usuario.
+
+### Historias de usuario
+
+Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
+de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
+todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
+ser el resultado de tu proceso de entendimiento de tus usuarios.
 
 ## 1. Resumen
 

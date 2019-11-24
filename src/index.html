@@ -16,8 +16,9 @@
                 <img class="logo-cabecera-pokemon" src="./imagenes/pokelogo.png">
       </figure>      
     </header>
+    <!--search-->
         <form class="fomulario-nombre">
-                <input type="text" id="nombre-pokemon" value="" placeholder="Escribe el nombre de tu pokémon"/>
+                <input type="text" id="nombre-pokemon" value="" placeholder="Nombre del pokemon"/>
         </form>
     <div id="siderbar">
         <div class="toglee">
@@ -26,7 +27,18 @@
         <ul>
                 
             <form id="filtros">
-                <li> <p>Filtrar por:</p></li>            
+                <li> <p>Filtrar por:</p></li>
+                <!-- <li><button id="inicio">Mostrar todos</button></li> -->
+                <li>
+                        <fieldset id="filtro-candys">
+                                <legend>Caramelos</legend>                        
+                                <input type="radio" id="12" name="candy">12<!-- checked="checked" -->
+                                <input type="radio" id="25" name="candy">25
+                                <input type="radio" id="50" name="candy">50
+                                <input type="radio" id="100" name="candy">100
+                                <input type="radio" id="400" name="candy">400                        
+                        </fieldset>
+                </li>
                 <li>
                         <select id="filtro-distancia" class="filtro-distancia">
                                 <option disabled selected>Huevo</option> 
@@ -68,10 +80,14 @@
                                 <option value="Steel">Acero</option>
                         </select>
                     </li>
-            </form>
-                 <li>
-                        <button id="mayor-frecuencia" value="MAYORF"><img src="./imagenes/top10.jpg" alt="TOP 10" width="100px"></button>
+                    <li>
+                        <fieldset id="filtro-frecuencia">
+                                <legend>TOP 10</legend>
+                                <input type="radio" name="frecuencia" id="MAYORF">Mayor Frecuencia<br>
+                                <input type="radio" name="frecuencia" id="MENORF">Menor Frecuencia
+                        </fieldset>
                 </li>
+            </form>                 
                 <li><p>Tipos:</p></li>
                 <li>
                     <section id="guia-tipos" class="guia-tipos">
@@ -127,7 +143,7 @@
     
    <main>
         <div class="insertar-pokemones" id="insertar-pokemones"></div>   
-   </main> 
+    </main> 
    
     <footer>
       <a class="redes-sociales" href="https://www.facebook.com/PokemonGO/" title="Facebook PokemonGo" target="_blank"> <img src="./imagenes/facebook.png" alt="Facebook"> </a>

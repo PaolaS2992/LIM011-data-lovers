@@ -9,7 +9,7 @@ body{
     background-attachment: fixed; 
     background-size: cover; 
     background-color:aqua;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
 }
 header{
     margin-bottom: 40px;
@@ -21,6 +21,9 @@ footer{
 }
 ul{
     list-style:none; 
+}
+p{
+    font-weight: bold;
 }
 .redes-sociales{
     margin-left: 10px;
@@ -57,7 +60,7 @@ ul{
 .toglee{
     position: absolute;
     left: 270px;
-    top: -35px;
+    top: -30px;
     cursor: pointer;
 }
 .menu{
@@ -95,8 +98,7 @@ ul{
 .numero-pokemon{
     text-align: center;
 }
-.btn-tipo
-{
+.btn-tipo{
     background: none;
     border: none;
     margin: 5px;
@@ -115,6 +117,10 @@ ul{
     width: 45px;
     margin-left: 15px;
 }
+#mayor-frecuencia{
+    background: none;
+    border: none; 
+}
 .guia-tipos{
     display: flex;
     flex-wrap: wrap;
@@ -127,10 +133,25 @@ ul{
     align-items: center;
 }
 #nombre-pokemon{
-   height: 25px;
-   width: 280px;
-   font-size: 18px;
+   height: 20px;
 }
+/*INICIO FILTRO CANDYS*/
+fieldset{
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+legend{
+    color: #00719F;
+    font-size: 15px;
+    text-align: center;
+}
+select{
+    width: 103px;
+    font-family: 'Montserrat', sans-serif;
+}
+/*FIN FILTRO CANDYS*/
+
 /*INICIO MODAL*/
 .modal{
     display: none;
@@ -153,7 +174,6 @@ ul{
 .contenido-modal{
     position: relative;
     background-image: url(./imagenes/paipos.png);
-   /* background: linear-gradient(to bottom, rgb(6, 196, 180), rgb(90, 165, 177), rgb(188, 236, 222)); */
     background-repeat: no-repeat;
     background-size: cover;
     background-color:rgba(236, 225, 225, 0.3);
@@ -168,109 +188,192 @@ ul{
     to{top:0; opacity: 1;}
 }
 .cerrar{
-    color: rgb(250, 241, 241);
+    color: rgb(105, 98, 98);
     font-size: 60px;
     font-weight: bolder;
     margin: 8px;
     text-align: center;
     cursor: pointer;
-    
 }
 .modal-open{
     display: block;
 }
+/*FIN MODAL*/
+
+/*INICIO CUERPO MODAL*/
 .modal-body{
     display: flex;
     flex-direction: column;
 }
 .modal-header{
     text-align: center;
-    padding: 5px;
     color: rgb(44, 42, 42);
-    font-weight: bolder;
-    font-size: 22px;
+    font-weight: bold;
+    font-size: 18px;
 }
 .modal-header img{
     width: 150px;
     height: 150px;
 }
-.modal-main{ 
+.modal-header h3{
+    color: white;
+}
+.modal-main{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-   
 }
 .columna{
     padding: 5px;
-    text-align: center; 
+    text-align: center;
 }
 .atributo-titulo{
     width: 120px;
     height: 25px;
-    background-color:rgb(27, 112, 56);
+    background-color:#00719F;
     border-radius: 10px;
     color: white;
     text-align: center;
-    line-height: 27px;
+    line-height: 23px;
     margin: auto;
+    font-size: 15px;
 }
 .atributo-valor{
+    font-size: 15px;
     font-weight: bold;
     line-height: 30px;
 }
 .modal-footer{
     text-align: center;
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
-    justify-content: center;   
-    margin-top: -10px; 
+    justify-content: center;    
 }
 .evolucion{
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.columna-evo{
-    padding: 10px;
+/*FIN CUERPO MODAL*/
+
+/*INICIO INFORMACION EVOLUCION*/
+div.card-evolucion{
+    margin: 10px;
+    width: 180px;
+    height: 200px;
+    background-color: #79C9F9;
+    overflow: hidden;
 }
-.evolucion figure{
+div.lado-front{
+    width: 180px;
+    height: 200px;
+    background-image: url(./imagenes/Opcion1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:rgba(236, 225, 225, 0.3);
+    text-align: center;
+    overflow: hidden;
+    -webkit-transition: height .4s;
+}
+.lado-front p{
+    color: crimson;
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 17px;
+}
+img.imagen{
+    display: block;
+    margin: 25px auto;
     width: 100px;
     height: 100px;
-    border-radius: 100%;
-    background-color:rgb(125, 196, 238);
-    margin: auto;
+    -webkit-transition: margin-top .4s;
 }
-.imagen-evolucion{
-    width: 100px;
-    height: 100px;
+div.lado-back{
+    width: 180px;
+    height: 0px;
+    background-color: crimson;
+    font-size: 13px;
+    text-align: center;
+    line-height: 17px;    
+    color: white;
+    overflow: hidden;
+    -webkit-transition: height .4s;
 }
-#mayor-frecuencia{
-    background: none;
-    border: none; 
+div.card-evolucion:hover div.lado-front{
+    height: 148px;
 }
+div.card-evolucion:hover div.lado-back{
+    height: 52px;
+}
+div.card-evolucion:hover img.imagen{
+    margin-top: 10px;
+}
+/*FIN INFORMACION EVOLUCION*/
+
+/*MEDIA QUERYS*/
 @media(max-width: 768px){
     .logo-cabecera-pokemon{
         width: 200px;
         height: 100px;        
     }
 }
-@media(max-width: 420px){
+@media(max-width: 820px){
     .contenido-modal{
         width: 70%;
     }
-    .evolucion figure{
+    .modal-header img{
+        width: 100px;
+        height: 100px;
+    }
+    /*INICIO QUERY HEADER*/
+    .modal-header{
+        padding: 2px;
+        font-size: 15px;
+        color: red;
+    }
+    /*INICIO QUERY MAIN*/
+    .atributo-titulo{
+        width: 80px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+        border-radius: 7px;
+    }
+    .atributo-valor{
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 10px;
+    }
+    /*INICIO QUERY FOOTER*/
+    div.card-evolucion{
+        margin: 5px;
+        width: 110px;
+        height: 150px;
+    }
+    div.lado-front{
+        width: 110px;
+        height: 150px;
+    }
+    .lado-front p{
+        font-size: 10px;
+        margin-top: 8px;
+        line-height: 13px;
+    }
+    .lado-front h5{
+        font-size: 10px;
+    }
+    img.imagen{
+        margin: 15px auto;
         width: 70px;
         height: 70px;
-        border: white 2px solid;
-        font-size: 6px; 
     }
-    .evolucion figure img{
-        width: 60px;
-        height: 60px;
+    div.lado-back{
+        font-size: 10px;        
+        line-height: 11px;
+        width: 110px;
+        height: 0px;       
     }
-    .columna-evo{
-        font-size: 12px;
-    }
+    div.card-evolucion:hover div.lado-front{
+        height: 115px;
+    }    
 }
-
-

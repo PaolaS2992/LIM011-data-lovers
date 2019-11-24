@@ -20,10 +20,10 @@ Buscamos que con esta información el usuario pueda mejorar su estrategia de jue
 ## 2. Imagen final del proyecto
 ### 2.1 . Desktop
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/pantallafinal1.jpg)
+![](https://github.com/PaolaS2992/LIM011-data-lovers/blob/pruebasPao/src/imagenes/pantallafinal1.jpg)
 
 ### 2.2. Mobile
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/pantallamovil.jpg)
+![](https://github.com/PaolaS2992/LIM011-data-lovers/blob/pruebasPao/src/imagenes/pantallamovil.jpg)
 ***
 
 ## 3. Investigación UX
@@ -52,33 +52,32 @@ Dentro de la investigación encontramos lo siguiente:
   - Como usuario necesito filtrar a los Pokémon por su tipo, a fin de realizar búsquedas mas específicas.
   - Como usuario necesito filtrar a los Pokémon por sus debilidades para elegir al pokémon indicado en una batalla.
   - Como usuario necesito filtrar por huevos para saber cuantos kilómetros debo caminar para eclosionar.
-  - Como usuario necesito poder buscar a un pokémon escribiendo su nombre a fin de que sea una búsqueda mucho mas rápida.
-  
+  - Como usuario necesito poder buscar a un pokémon escribiendo su nombre a fin de que sea una búsqueda mucho más rápida.
   - Como usuario necesito filtrar por orden alfabetico a fin de realizar una búsqueda ordenada.
   - Como usuario necesito ver la página en distintos dispositivos para mayor comodidad.
-  - Como usuario necesito filtrar por evolución para saber la siguiente evolcuión de un pokémon.
+  - Como usuario necesito filtrar por evolución para saber la siguiente evolución de un pokémon.
   ***
 ## 4. Prototipo en papel
 
 ### 4.1. Desktop
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio1.jpeg)
+![](https://github.com/PaolaS2992/LIM011-data-lovers/blob/pruebasPao/src/imagenes/escritorio1.jpeg)
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio2.jpeg)
+![](https://github.com/PaolaS2992/LIM011-data-lovers/blob/pruebasPao/src/imagenes/escritorio2.jpeg)
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio3.jpeg)
+![](https://github.com/PaolaS2992/LIM011-data-lovers/blob/pruebasPao/src/imagenes/escritorio3.jpeg)
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/escritorio4.jpeg)
+![](https://github.com/PaolaS2992/LIM011-data-lovers/blob/pruebasPao/src/imagenes/escritorio4.jpeg)
 
 ### 4.2. Mobile
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel1.jpeg)
+![](https://github.com/PaolaS2992/LIM011-data-lovers/blob/pruebasPao/src/imagenes/celularpapel1.jpeg)
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel2.jpeg)
+![](https://github.com/PaolaS2992/LIM011-data-lovers/blob/pruebasPao/src/imagenes/celularpapel2.jpeg)
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel3.jpeg)
+![](https://github.com/PaolaS2992/LIM011-data-lovers/blob/pruebasPao/src/imagenes/celularpapel3.jpeg)
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/celularpapel4.jpeg)
+![](https://github.com/PaolaS2992/LIM011-data-lovers/blob/pruebasPao/src/imagenes/celularpapel4.jpeg)
 ***
 ## 5. Feedback
 Testeamos el prototipo de baja fidelidad con 5 usuarios y se realizaron los siguientes cambios:
@@ -91,13 +90,13 @@ Testeamos el prototipo de baja fidelidad con 5 usuarios y se realizaron los sigu
 
 ### 6.1. Desktop
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/figmaescritorio.png)
+![](https://github.com/PaolaS2992/LIM011-data-lovers/blob/pruebasPao/src/imagenes/figmaescritorio.png)
 
 \* Puedes ver el prototipo desktop completo en este [link](https://www.figma.com/proto/AD7dxL6NzPTDVg1AFfpQKC/POKE?node-id=2%3A2&scaling=min-zoom)
 
 ### 6.2. Mobile
 
-![](https://github.com/fiofernandini/LIM011-data-lovers/blob/PruebasFio/src/imagenes/figmacelular.png)
+![](https://github.com/PaolaS2992/LIM011-data-lovers/blob/pruebasPao/src/imagenes/figmacelular.png)
 
 \* Puedes ver el prototipo mobile completo en este [link](https://www.figma.com/proto/8QId6tCu6gQDM7UdPdSz0E/POKE-CELULAR?node-id=1%3A2&scaling=min-zoom)
 
@@ -148,7 +147,7 @@ y de equipo.
 
 ### Git y GitHub
 - [X] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
-- [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
+- [X] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
 - [ ] Colaborar en Github (pull requests).
 
 ### Buenas prácticas de desarrollo

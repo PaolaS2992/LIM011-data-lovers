@@ -1,5 +1,6 @@
 import {
   filtroHuevo, filtroDebilidadTipo, buscarPorNombre, AsDes, traerDataMap2, evolutions,
+  filterInfEvoAndCandy,
 } from '../src/data';
 
 describe('traerDataMap2', () => {
@@ -70,12 +71,14 @@ describe('AsDes', () => {
     const ordenZa = [{ nombre: 'Zubat', numero: '049', frecuencia: 652 }, { nombre: 'Bulbasaur', numero: '001', frecuencia: 69 }, { nombre: 'Articuno', numero: '144', frecuencia: 0 }];
     const ascendente = [{ nombre: 'Bulbasaur', numero: '001', frecuencia: 69 }, { nombre: 'Zubat', numero: '049', frecuencia: 652 }, { nombre: 'Articuno', numero: '144', frecuencia: 0 }];
     const descendente = [{ nombre: 'Articuno', numero: '144', frecuencia: 0 }, { nombre: 'Zubat', numero: '049', frecuencia: 652 }, { nombre: 'Bulbasaur', numero: '001', frecuencia: 69 }];
-    const frecuencia = [{ nombre: 'Articuno', numero: '144', frecuencia: 0 }, { nombre: 'Bulbasaur', numero: '001', frecuencia: 69 }, { nombre: 'Zubat', numero: '049', frecuencia: 652 }];
+    const MayorFrecuencia = [{ nombre: 'Zubat', numero: '049', frecuencia: 652 }, { nombre: 'Bulbasaur', numero: '001', frecuencia: 69 }, { nombre: 'Articuno', numero: '144', frecuencia: 0 }];
+    const MenorFrecuencia = [{ nombre: 'Articuno', numero: '144', frecuencia: 0 }, { nombre: 'Bulbasaur', numero: '001', frecuencia: 69 }, { nombre: 'Zubat', numero: '049', frecuencia: 652 }];
     expect(AsDes(dataOrdenar, 'A-Z')).toEqual(ordenAz);
     expect(AsDes(dataOrdenar, 'Z-A')).toEqual(ordenZa);
     expect(AsDes(dataOrdenar, 'ASC')).toEqual(ascendente);
     expect(AsDes(dataOrdenar, 'DESC')).toEqual(descendente);
-    expect(AsDes(dataOrdenar, 'MAYORF')).toEqual(frecuencia);
+    expect(AsDes(dataOrdenar, 'MAYORF')).toEqual(MayorFrecuencia);
+    expect(AsDes(dataOrdenar, 'MENORF')).toEqual(MenorFrecuencia);
   });
 });
 
@@ -95,5 +98,20 @@ describe('Filtro por Evoluciones', () => {
   it('Deberia filtrar => EVOLUCIONES IDENTIFICADOR', () => {
     const dataSalida = [];
     expect(evolutions(dataIngreso, 'Siguiente', '1')).toEqual(dataSalida);
+  });
+});
+
+describe('Filtro por Inf.Evoluciones y Candy', () => {
+  it('Deberia ser una Función', () => {
+    expect(typeof filterInfEvoAndCandy).toBe('function');
+  });
+  const dataIngreso = [{ numero: '001', nombre: 'Bulbasaur', caramelos: 25 }, { numero: '002', nombre: 'Ivysaur', caramelos: 100 }, { numero: '004', nombre: 'Charmander', caramelos: 25 }];
+  const dataInfoEvo = [{ numero: '001', nombre: 'Bulbasaur', caramelos: 25 }];
+  const dataCandys = [{ numero: '001', nombre: 'Bulbasaur', caramelos: 25 }, { numero: '004', nombre: 'Charmander', caramelos: 25 }];
+  it('Deberia filtrar => INFORMACIÓN EVOLUCIONES', () => {
+    expect(filterInfEvoAndCandy(dataIngreso, 'numero', '001')).toEqual(dataInfoEvo);
+  });
+  it('Deberia filtrar => CARAMELOS', () => {
+    expect(filterInfEvoAndCandy(dataIngreso, 'caramelos', 25)).toEqual(dataCandys);
   });
 });

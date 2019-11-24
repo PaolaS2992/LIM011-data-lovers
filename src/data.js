@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-// Minidata
+// FUNCION MINIDATA.
 export const traerDataMap2 = (arr) => arr.map((ele) => {
   const obj = {
     identificador: ele.id,
@@ -19,12 +19,12 @@ export const traerDataMap2 = (arr) => arr.map((ele) => {
   };
   return obj;
 });
-// Filtro Huevos
+// FUNCION HUEVITOS.
 export const filtroHuevo = (array, distancia) => {
   const nuevoArray = array.filter((objeto) => objeto.huevo === distancia);
   return nuevoArray;
 };
-// Filtro debilidades y tipo
+// FUNCION PARA DEBILIDADES Y TIPO.
 export const filtroDebilidadTipo = (array, propiedad, valor) => {
   const newArray = [];
   array.forEach((objeto) => {
@@ -36,20 +36,17 @@ export const filtroDebilidadTipo = (array, propiedad, valor) => {
   });
   return newArray;
 };
-
-// filtro buscador por nombre
+// FUNCION PARA BUSCAR NOMBRES.
 export const buscarPorNombre = (array, nombres) => {
-  const nuevoArraysss = array.filter((objeto) => (objeto.nombre).toLowerCase().startsWith(nombres));
+  const nuevoArraysss = array.filter((objeto) => objeto.nombre.toLowerCase().startsWith(nombres));
   return nuevoArraysss;
 };
-
-// Filtro orden alfabetico, orden asc - desc y top
+// FUNCION PARA ORDENAR POR NOMBRE, NUMERO Y TOP 10
 // eslint-disable-next-line arrow-body-style
 export const ordenAlfNum = (arr, propiedad) => {
   return arr.sort((a, b) => (a[propiedad] < b[propiedad] ? -1 : 1));
 };
-
-// SELECCIONANDO STRING.
+// SELECCIONANDO STRING.(PARTE DE LA FUNCIÓ ORDENAR).
 // eslint-disable-next-line consistent-return
 export const AsDes = (data, string) => {
   switch (string) {
@@ -61,8 +58,10 @@ export const AsDes = (data, string) => {
       return ordenAlfNum(data, 'numero');
     case 'DESC':
       return ordenAlfNum(data, 'numero').reverse();
-    case 'MAYORF':
+    case 'MENORF':
       return ordenAlfNum(data, 'frecuencia').slice(0, 10);
+    case 'MAYORF':
+      return ordenAlfNum(data, 'frecuencia').reverse().slice(0, 10);
       // no default
   }
 };
@@ -81,5 +80,10 @@ export const evolutions = (arr, propiedad, num) => {
       }
     }
   });
+  return newArray;
+};
+// FUNCION PARA INF.EVOLUCIONES Y CARAMELOS.
+export const filterInfEvoAndCandy = (arr, propiedad, string) => {
+  const newArray = arr.filter((obj) => obj[propiedad] === string);
   return newArray;
 };

@@ -11,9 +11,6 @@ body{
     background-color:aqua;
     font-family: 'Montserrat', sans-serif;
 }
-header{
-    margin-bottom: 40px;
-}
 footer{
     display: flex;
     justify-content: center;
@@ -29,19 +26,17 @@ p{
     margin-left: 10px;
 }
 .logo-cabecera-pokemon{
-    display: flex; 
-    display: block;
+    display: flex;
     width: 360px;
     height: 160px;
-    margin: auto; 
-    margin-top: 15px;;
+    margin: auto;
+    padding: 8px;
 }
 #siderbar{
     font-family: 'Montserrat', sans-serif;
     position: absolute;
     margin-top: -50px;
     width: 260px;
-    height: 120%;
     background: rgba(222, 222, 228, 0.9);
     left: -260px;
     transition: all 500ms linear;
@@ -49,6 +44,7 @@ p{
 }
 #siderbar.active{
     left: 0;
+    z-index: 1;
 }
 #siderbar ul li{
     margin-top: 5px;
@@ -72,11 +68,11 @@ p{
 }
 .insertar-pokemones{
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 .tarjeta-pokemon{
     background-color:rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
+    margin-top: 15px;
     border-radius: 20px; 
     width: 230px;
     margin-left: auto;
@@ -102,6 +98,7 @@ p{
     background: none;
     border: none;
     margin: 5px;
+    outline: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;    
     font-weight: lighter;
@@ -131,18 +128,21 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 10px;
 }
 #nombre-pokemon{
    height: 20px;
+   text-align: center;
+   font-family: 'Montserrat', sans-serif;
+   font-size:13px;
 }
 /*INICIO FILTRO CANDYS*/
 fieldset{
     padding: 8px;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 14px;
 }
 legend{
-    color: #00719F;
     font-size: 15px;
     text-align: center;
 }
@@ -151,6 +151,50 @@ select{
     font-family: 'Montserrat', sans-serif;
 }
 /*FIN FILTRO CANDYS*/
+
+/*INICIO FILTRO TOP 10*/
+.filtro-frecuencia{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.frecuencia{
+    width: 80px;
+    height: 80px;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.frecuencia img{
+    width: 40px;
+    height: 40px;    
+}
+/*FIN FILTRO TOP 10*/
+
+/*INICIO FILTRO MAS Y MENOS DEBIL*/
+.filtro-mas-menos-debil{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.debilidad{
+    width: 60px;
+    height: 60px;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    margin: 15px;
+    cursor: pointer;
+}
+.debilidad img{
+    width: 40px;
+    height: 40px;
+}
+/*FIN FILTRO MAS Y MENOS DEBIL*/
 
 /*INICIO MODAL*/
 .modal{
@@ -188,7 +232,7 @@ select{
     to{top:0; opacity: 1;}
 }
 .cerrar{
-    color: rgb(105, 98, 98);
+    color: rgb(243, 242, 232);
     font-size: 60px;
     font-weight: bolder;
     margin: 8px;
@@ -309,6 +353,103 @@ div.card-evolucion:hover img.imagen{
     margin-top: 10px;
 }
 /*FIN INFORMACION EVOLUCION*/
+
+/* INICIO FILTRO AVANZADO*/
+.hide{
+    display: none;
+}
+.filtro-avanzado{
+    width: 70%;
+    margin: auto;
+    border-radius: 20px;
+    background: -webkit-linear-gradient(#7682D8, #33ADD4);
+    padding-top: 8px;
+}
+.agrupar-tipo{
+    width: 90%;
+    margin: auto;
+    color: white;
+    border: none;
+}
+.agrupar-tipo legend {
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+}
+.check-tipo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+.celdas-radio{
+    width: 100px;
+    height: 20px;
+    margin: 2px;
+    font-size: 13px;    
+    text-align: right;
+}
+.agrupar-debilidad{
+    margin: auto;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.agrupar-botones{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn-avanzado{
+    width: 80px;
+    height: 25px;
+    margin: 5px;
+    padding: 8px;
+    line-height: 5px;    
+    font-family:'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #f2f2f2;
+    border: 2px solid #f2f2f2;    
+    border-radius: 5px;
+    background: transparent;
+    transition: background 1s, color 1s;    
+    cursor: pointer;
+}
+.btn-avanzado:hover {
+    background: #f2f2f2;
+    color:#4d80e4;
+    font-weight: bold;
+}
+/*BOTON MOSTRAR*/
+.mostrar-filtro-avanzado{
+    text-align: center;
+    padding: 10px;
+}
+.btn-mostrar{
+    width: 100px;
+    height: 50px;    
+    outline: none;
+    font-family:'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.btn-mostrar img{
+    width: 30px;
+    height: 30px;    
+}
+.mensaje{
+    height: 20px;
+    text-align: center;
+}
+.mensaje p{
+    font-size: 12px;
+    color: crimson;
+}
+/* FIN FILTRO AVANZADO */
 
 /*MEDIA QUERYS*/
 @media(max-width: 768px){

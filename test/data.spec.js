@@ -1,6 +1,6 @@
 import {
   filtroHuevo, filtroDebilidadTipo, buscarPorNombre, AsDes, traerDataMap2, evolutions,
-  filterInfEvoAndCandy,
+  filterInfEvoAndCandy, filtroGeneralDebilidad, filtroFusionado,
 } from '../src/data';
 
 describe('traerDataMap2', () => {
@@ -113,5 +113,56 @@ describe('Filtro por Inf.Evoluciones y Candy', () => {
   });
   it('Deberia filtrar => CARAMELOS', () => {
     expect(filterInfEvoAndCandy(dataIngreso, 'caramelos', 25)).toEqual(dataCandys);
+  });
+});
+
+describe('Filtro para ordenar más o menos débiles', () => {
+  it('Debería ser una función', () => {
+    expect(typeof filtroGeneralDebilidad).toBe('function');
+  });
+  it('Debería filtrar => ORDENAR POR MENOR CANTIDAD "LENGTH" DE DEBILIDADES', () => {
+    const dataIngreso = [{ numero: '102', nombre: 'Exeggcute', debilidades: ['Fire', 'Ice', 'Poison', 'Flying', 'Bug', 'Ghost', 'Dark'] }, { numero: '019', nombre: 'Rattata', debilidades: ['Fighting'] }];
+    const dataSalida = [{ numero: '019', nombre: 'Rattata', debilidades: ['Fighting'] }, { numero: '102', nombre: 'Exeggcute', debilidades: ['Fire', 'Ice', 'Poison', 'Flying', 'Bug', 'Ghost', 'Dark'] }];
+    expect(filtroGeneralDebilidad(dataIngreso, 'MENOSDEBI')).toEqual(dataSalida);
+  });
+  it('Debería filtrar => ORDENAR POR MAYOR CANTIDAD "LENGTH" DE DEBILIDADES', () => {
+    const dataIngreso = [{ numero: '019', nombre: 'Rattata', debilidades: ['Fighting'] }, { numero: '102', nombre: 'Exeggcute', debilidades: ['Fire', 'Ice', 'Poison', 'Flying', 'Bug', 'Ghost', 'Dark'] }];
+    const dataSalida = [{ numero: '102', nombre: 'Exeggcute', debilidades: ['Fire', 'Ice', 'Poison', 'Flying', 'Bug', 'Ghost', 'Dark'] }, { numero: '019', nombre: 'Rattata', debilidades: ['Fighting'] }];
+    expect(filtroGeneralDebilidad(dataIngreso, 'MASDEBI')).toEqual(dataSalida);
+  });
+  it('Deberia filtrar => RETURN 0 PARA MENOS DEBIL', () => {
+    const dataIngreso = [{ numero: '019', nombre: 'Rattata', debilidades: ['Fighting'] }, { numero: '102', nombre: 'Exeggcute', debilidades: ['Fire', 'Ice', 'Poison', 'Flying', 'Bug', 'Ghost', 'Dark'] }];
+    const dataSalida = [{ numero: '019', nombre: 'Rattata', debilidades: ['Fighting'] }, { numero: '102', nombre: 'Exeggcute', debilidades: ['Fire', 'Ice', 'Poison', 'Flying', 'Bug', 'Ghost', 'Dark'] }];
+    expect(filtroGeneralDebilidad(dataIngreso, 'MENOSDEBI')).toEqual(dataSalida);
+  });
+  it('Deberia filtrar => RETURN 0 PARA MAS DEBIL', () => {
+    const dataIngreso = [{ numero: '102', nombre: 'Exeggcute', debilidades: ['Fire', 'Ice', 'Poison', 'Flying', 'Bug', 'Ghost', 'Dark'] }, { numero: '019', nombre: 'Rattata', debilidades: ['Fighting'] }];
+    const dataSalida = [{ numero: '102', nombre: 'Exeggcute', debilidades: ['Fire', 'Ice', 'Poison', 'Flying', 'Bug', 'Ghost', 'Dark'] }, { numero: '019', nombre: 'Rattata', debilidades: ['Fighting'] }];
+    expect(filtroGeneralDebilidad(dataIngreso, 'MASDEBI')).toEqual(dataSalida);
+  });
+});
+
+describe('Filtro Avanzado "TOMA DOS CRITERIOS DE EVALUACIÓN"', () => {
+  it('Debería ser una función', () => {
+    expect(typeof filtroFusionado).toBe('function');
+  });
+  it('Debería filtrar por TIPO y su DEBILIDAD', () => {
+    const dataIngreso = [{
+      numero: '006', nombre: 'Charizard', tipo: ['Fire', 'Flying'], debilidades: ['Water', 'Electric', 'Rock'],
+    },
+    {
+      numero: '142', nombre: 'Aerodactyl', tipo: ['Rock', 'Flying'], debilidades: ['Water', 'Electric', 'Ice', 'Rock', 'Steel'],
+    },
+    {
+      numero: '123', nombre: 'Scyther', tipo: ['Bug', 'Flying'], debilidades: ['Fire', 'Electric', 'Ice', 'Flying', 'Rock'],
+    }];
+
+    const dataSalida = [{
+      numero: '006', nombre: 'Charizard', tipo: ['Fire', 'Flying'], debilidades: ['Water', 'Electric', 'Rock'],
+    },
+    {
+      numero: '142', nombre: 'Aerodactyl', tipo: ['Rock', 'Flying'], debilidades: ['Water', 'Electric', 'Ice', 'Rock', 'Steel'],
+    }];
+    expect(filtroFusionado(dataIngreso, 'Flying', 'Water')).toEqual(dataSalida);
   });
 });

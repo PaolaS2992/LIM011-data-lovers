@@ -44,7 +44,7 @@ export const buscarPorNombre = (array, nombres) => {
 // FUNCION PARA ORDENAR POR NOMBRE, NUMERO Y TOP 10
 // eslint-disable-next-line arrow-body-style
 export const ordenAlfNum = (arr, propiedad) => {
-  return arr.sort((a, b) => (a[propiedad] < b[propiedad] ? -1 : 1));
+  return arr.sort((a, b) => (a[propiedad] > b[propiedad] ? 1 : -1));
 };
 // SELECCIONANDO STRING.(PARTE DE LA FUNCIÓ ORDENAR).
 // eslint-disable-next-line consistent-return
@@ -86,4 +86,43 @@ export const evolutions = (arr, propiedad, num) => {
 export const filterInfEvoAndCandy = (arr, propiedad, string) => {
   const newArray = arr.filter((obj) => obj[propiedad] === string);
   return newArray;
+};
+// FUNCION PARA ORDENAR EL MENOS Y MÁS DEBIL.
+export const filtroGeneralDebilidad = (arr, str) => {
+  let newArray = [];
+  if (str === 'MENOSDEBI') {
+    newArray = arr.sort((a, b) => {
+      if (a.debilidades.length > b.debilidades.length) return 1;
+      if (a.debilidades.length < b.debilidades.length) return -1;
+      return 0;
+    });
+  }
+  if (str === 'MASDEBI') {
+    newArray = arr.sort((a, b) => {
+      if (b.debilidades.length > a.debilidades.length) return 1;
+      if (b.debilidades.length < a.debilidades.length) return -1;
+      return 0;
+    });
+  }
+  return newArray;
+};
+// FILTRO AVANZADO: SE CONSIDERA EL TIPO Y DEBILIDAD.
+export const filtroFusionado = (arr, tipo, debilidad) => {
+  const newArray = [];
+  const newArray1 = [];
+  arr.forEach((objeto) => {
+    objeto.tipo.forEach((string) => {
+      if (string === tipo) {
+        newArray.push(objeto);
+      }
+    });
+  });
+  newArray.forEach((objeto) => {
+    objeto.debilidades.forEach((string) => {
+      if (string === debilidad) {
+        newArray1.push(objeto);
+      }
+    });
+  });
+  return newArray1;
 };

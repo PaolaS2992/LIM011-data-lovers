@@ -12,144 +12,309 @@
 
   <body>
     <header>
-      <figure>
+        <figure>
                 <img class="logo-cabecera-pokemon" src="./imagenes/pokelogo.png">
-      </figure>      
-    </header>
-    <!--search-->
+        </figure>    
+        <!--BUSCAR POR NOMBRE-->
         <form class="fomulario-nombre">
                 <input type="text" id="nombre-pokemon" value="" placeholder="Nombre del pokemon"/>
         </form>
-    <div id="siderbar">
-        <div class="toglee">
-                <span class="menu">&#9776;</span>    
+        <!-- INICIO FILTRO AVANZADO-->                
+        <div class="hide filtro-avanzado" id="filtro-avanzado">
+                <fieldset class="agrupar-tipo">
+                        <legend>A. Seleccionar Tipo</legend>
+                        <div id="check-tipo" class="check-tipo">
+                                <div class="contenedor-celdas">
+                                        <div class="celdas-radio">
+                                                <label for="Flying">Aire</label>
+                                                <input type="radio" name="tipo" id="Flying" class="tipo">
+                                        </div>
+                                        <div class="celdas-radio">
+                                                <label for="Electric">Electricidad</label>
+                                                <input type="radio" name="tipo" id="Electric" class="tipo">
+                                        </div>
+                                </div>
+                                <div class="contenedor-celdas">
+                                        <div class="celdas-radio">   
+                                                <label for="Water">Agua</label>
+                                                <input type="radio" name="tipo" id="Water" class="tipo">
+                                        </div>                                        
+                                        <div class="celdas-radio">
+                                                <label for="Dragon">Dragon</label>
+                                                <input type="radio" name="tipo" id="Dragon" class="tipo">
+                                        </div>
+                                </div>
+                                <div class="contenedor-celdas">                                    
+                                        <div class="celdas-radio">
+                                                <label for="Ghost">Fantasma</label>
+                                                <input type="radio" name="tipo" id="Ghost" class="tipo">
+                                        </div>
+                                        <div class="celdas-radio">
+                                                <label for="Ground">Tierra</label>
+                                                <input type="radio" name="tipo" id="Ground" class="tipo">
+                                        </div>
+                                </div> 
+                                <div class="contenedor-celdas">   
+                                        <div class="celdas-radio">
+                                                <label for="Fire">Fuego</label>
+                                                <input type="radio" name="tipo" id="Fire" class="tipo">
+                                        </div>
+                                        <div class="celdas-radio">
+                                                <label for="Bug">Insecto</label>
+                                                <input type="radio" name="tipo" id="Bug" class="tipo">
+                                        </div>                                        
+                                </div>
+                                <div class="contenedor-celdas">
+                                        <div class="celdas-radio">
+                                                <label for="Fighting">Lucha</label>
+                                                <input type="radio" name="tipo" id="Fighting" class="tipo">
+                                        </div>                                        
+                                        <div class="celdas-radio">
+                                                <label for="Normal">Normal</label>
+                                                <input type="radio" name="tipo" id="Normal" class="tipo">
+                                        </div>
+                                </div>
+                                <div class="contenedor-celdas">
+                                        <div class="celdas-radio">
+                                                <label for="Grass">Planta</label>
+                                                <input type="radio" name="tipo" id="Grass" class="tipo">
+                                        </div> 
+                                        <div class="celdas-radio">
+                                                <label for="Ice">Hielo</label>
+                                                <input type="radio" name="tipo" id="Ice" class="tipo">
+                                        </div> 
+                                </div>
+                                <div class="contenedor-celdas">
+                                        <div class="celdas-radio">
+                                                <label for="Psychic">Psíquico</label>
+                                                <input type="radio" name="tipo" id="Psychic" class="tipo">
+                                        </div>                                        
+                                        <div class="celdas-radio">
+                                                <label for="Rock">Roca</label>
+                                                <input type="radio" name="tipo" id="Rock" class="tipo">
+                                        </div>
+                                </div>
+                                <div class="contenedor-celdas">
+                                        <div class="celdas-radio">
+                                                <label for="Poison">Veneno</label>
+                                                <input type="radio" name="tipo" id="Poison" class="tipo">
+                                        </div>                                     
+                                                                        
+                                </div>
+                        </div>
+                </fieldset>
+                <div class="agrupar-debilidad">
+                        <span>B. Seleccionar Debilidad</span>
+                        <div>                
+                        <select id="select-debilidades" class="select-debilidades">
+                                <option value = "0" disabled selected>Debilidades</option> 
+                                <option value="Water" class="debilidad">Agua</option>
+                                <option value="Flying" class="debilidad">Aire</option>
+                                <option value="Dragon" class="debilidad">Dragon</option>
+                                <option value="Electric" class="debilidad">Electricidad</option>
+                                <option value="Ghost" class="debilidad">Fantasma</option>
+                                <option value="Fire" class="debilidad">Fuego</option>
+                                <option value="Ice" class="debilidad">Hielo</option>
+                                <option value="Bug" class="debilidad">Insecto</option>
+                                <option value="Normal" class="debilidad">Normal</option>
+                                <option value="Fighting" class="debilidad">Lucha</option> 
+                                <option value="Grass" class="debilidad">Planta</option>
+                                <option value="Psychic" class="debilidad">Psíquico</option>
+                                <option value="Rock" class="debilidad">Roca</option>                          
+                                <option value="Ground" class="debilidad">Tierra</option> 
+                                <option value="Poison" class="debilidad">Veneno</option>
+                                <option value="Fairy" class="debilidad">Magico</option>                          
+                                <option value="Dark" class="debilidad">Oscuro</option> 
+                                <option value="Steel" class="debilidad">Acero</option>                                                
+                        </select>
+                        </div> 
+                </div>
+                <div class="agrupar-botones">
+                        <button id="btn-filtrar" class="btn-avanzado">Filtrar</button>                        
+                        <button id="btn-limpiar" class="btn-avanzado">Limpiar</button>
+                        <button id="btn-ocultar" class="btn-avanzado">Ocultar</button>                        
+                </div>
+                <div class="hide mensaje">
+                        <p id="text-mensaje">No seleccionaste ninguna opción</p>
+                </div>                   
         </div>
-        <ul>
-                
-            <form id="filtros">
-                <li> <p>Filtrar por:</p></li>
-                <!-- <li><button id="inicio">Mostrar todos</button></li> -->
-                <li>
-                        <fieldset id="filtro-candys">
-                                <legend>Caramelos</legend>                        
-                                <input type="radio" id="12" name="candy">12<!-- checked="checked" -->
-                                <input type="radio" id="25" name="candy">25
-                                <input type="radio" id="50" name="candy">50
-                                <input type="radio" id="100" name="candy">100
-                                <input type="radio" id="400" name="candy">400                        
-                        </fieldset>
-                </li>
-                <li>
-                        <select id="filtro-distancia" class="filtro-distancia">
-                                <option disabled selected>Huevo</option> 
-                                <option value="Not in Eggs">Not in Eggs</option>
-                                <option value="2 km">2 km</option>
-                                <option value="5 km">5 km</option>
-                                <option value="10 km">10 km</option>
-                        </select>
-                </li>
-                <li>
-                        <select name="" id="ordenAlfNum">
-                                <option disabled selected>Orden</option>
-                                <option value="A-Z">A-Z</option>
-                                <option value="Z-A">Z-A</option>
-                                <option value="ASC">Ascendente</option>
-                                <option value="DESC">Descendente</option>
-                        </select>
-                </li>
-                <li>
-                        <select id="filtro-debilidades">
-                                <option disabled selected>Debilidades</option> 
-                                <option value="Water">Agua</option>
-                                <option value="Flying">Aire</option>
-                                <option value="Dragon">Dragon</option>
-                                <option value="Electric">Electricidad</option>
-                                <option value="Ghost">Fantasma</option>
-                                <option value="Fire">Fuego</option>
-                                <option value="Ice">Hielo</option>
-                                <option value="Bug">Insecto</option>
-                                <option value="Normal">Normal</option>
-                                <option value="Fighting">Lucha</option> 
-                                <option value="Grass">Planta</option>
-                                <option value="Psychic">Psíquico</option>
-                                <option value="Rock">Roca</option>                          
-                                <option value="Ground">Tierra</option> 
-                                <option value="Poison">Veneno</option>
-                                <option value="Fairy">Magico</option>                          
-                                <option value="Dark">Oscuro</option> 
-                                <option value="Steel">Acero</option>
-                        </select>
-                    </li>
-                    <li>
-                        <fieldset id="filtro-frecuencia">
-                                <legend>TOP 10</legend>
-                                <input type="radio" name="frecuencia" id="MAYORF">Mayor Frecuencia<br>
-                                <input type="radio" name="frecuencia" id="MENORF">Menor Frecuencia
-                        </fieldset>
-                </li>
-            </form>                 
-                <li><p>Tipos:</p></li>
-                <li>
-                    <section id="guia-tipos" class="guia-tipos">
-                        <button id="aire" class="btn-tipo"> 
-                               <img class="btn" src="./imagenes/aire.png" alt="Flying"><br> Aire
-                        </button>
-                        <button id="electrico" class="btn-tipo"> 
-                               <img class="btn" src="./imagenes/electrico.png" alt="Electric"><br> Eléctrico
-                        </button>
-                        <button id="agua" class="btn-tipo"> 
-                                <img class="btn" src="./imagenes/agua.png" alt="Water"><br> Agua
-                        </button>
-                        <button id="dragon" class="btn-tipo"> 
-                                <img class="btn" src="./imagenes/dragon.png" alt="Dragon"><br> Dragón
-                        </button>
-                        <button id="fantasma" class="btn-tipo"> 
-                                <img class="btn" src="./imagenes/fantasma.png" alt="Ghost"><br> Ghost
-                        </button>
-                        <button id="tierra" class="btn-tipo"> 
-                                <img class="btn" src="./imagenes/tierra.png" alt="Ground"><br> Tierra
-                        </button>
-                        <button id="fuego" class="btn-tipo"> 
-                                <img class="btn" src="./imagenes/fuego.png" alt="Fire"><br> Fuego
-                        </button>
-                        <button id="insecto" class="btn-tipo"> 
-                                <img class="btn" src="./imagenes/insecto.png" alt="Bug"><br> Insecto
-                        </button>
-                        <button id="lucha" class="btn-tipo"> 
-                                <img class="btn" src="./imagenes/lucha.png" alt="Fighting"><br> Lucha
-                        </button>
-                        <button id="normal" class="btn-tipo"> 
-                                <img class="btn" src="./imagenes/normal.png" alt="Normal"><br> Normal
-                        </button>
-                        <button id="planta" class="btn-tipo"> 
-                                <img class="btn" src="./imagenes/planta.png" alt="Grass"><br> Planta
-                        </button>
-                        <button id="hielo" class="btn-tipo"> 
-                                <img class="btn" src="./imagenes/hielo.png" alt="Ice"><br> Hielo
-                        </button>
-                        <button id="psiquico" class="btn-tipo"> 
-                                <img class="btn" src="./imagenes/psiquico.png" alt="Psychic"><br> Psíquico
-                        </button>
-                        <button id="roca" class="btn-tipo"> 
-                                <img class="btn" src="./imagenes/roca.png" alt="Rock"><br> Roca
-                        </button>
-                        <button id="veneno" class="btn-tipo"> 
-                                <img class="btn" src="./imagenes/veneno.png" alt="Poison"><br> Veneno
-                        </button>
-                    </section>
-                </li>
-        </ul>
-    </div>
-    
-   <main>
+        <div id="mostrar-filtro-avanzado" class="mostrar-filtro-avanzado">
+                <button id="btn-mostrar" class="btn-mostrar">
+                        <img src="./imagenes/Filtro-Avanzado-Si.png" alt=""><br>
+                        <label for="">Filtro Avanzado</label>
+                </button> 
+        </div>
+        <!--FIN FILTRO AVANZADO-->
+        <!--INICIO DEL MENÚ-->
+        <div id="siderbar">
+                <div class="toglee">
+                        <span class="menu">&#9776;</span>    
+                </div>
+                <ul>                
+                <form id="filtros"> <!--FORM PARA APLICAR LE MÉTODO RESET()-->
+                        <li> <p>Filtrar por:</p></li>
+                        <!--FILTRO CARAMELOS-->
+                        <li>
+                                <fieldset id="filtro-candys">
+                                        <legend>Caramelos</legend>                        
+                                        <input type="radio" id="12" name="candy"><label for="12">12</label><!-- checked="checked" -->
+                                        <input type="radio" id="25" name="candy"><label for="25">25</label>
+                                        <input type="radio" id="50" name="candy"><label for="50">50</label>
+                                        <input type="radio" id="100" name="candy"><label for="100">100</label>
+                                        <input type="radio" id="400" name="candy"><label for="400">400</label>       
+                                </fieldset>
+                        </li>
+                        <!--FILTRO HUEVITOS-->
+                        <li>
+                                <select id="filtro-distancia" class="filtro-distancia">
+                                        <option disabled selected>Huevo</option> 
+                                        <option value="Not in Eggs">Not in Eggs</option>
+                                        <option value="2 km">2 km</option>
+                                        <option value="5 km">5 km</option>
+                                        <option value="10 km">10 km</option>
+                                </select>
+                        </li>
+                        <!--FILTRO ORDEN-->
+                        <li>
+                                <select name="" id="ordenAlfNum">
+                                        <option disabled selected>Orden</option>
+                                        <option value="A-Z">A-Z</option>
+                                        <option value="Z-A">Z-A</option>
+                                        <option value="ASC">Ascendente</option>
+                                        <option value="DESC">Descendente</option>
+                                </select>
+                        </li>
+                        <!--FILTRO DEBILIDADES-->
+                        <li><p>Debilidades</p></li>
+                        <li>
+                                <select id="filtro-debilidades">
+                                        <option disabled selected>Debilidades</option> 
+                                        <option value="Water">Agua</option>
+                                        <option value="Flying">Aire</option>
+                                        <option value="Dragon">Dragon</option>
+                                        <option value="Electric">Electricidad</option>
+                                        <option value="Ghost">Fantasma</option>
+                                        <option value="Fire">Fuego</option>
+                                        <option value="Ice">Hielo</option>
+                                        <option value="Bug">Insecto</option>
+                                        <option value="Normal">Normal</option>
+                                        <option value="Fighting">Lucha</option> 
+                                        <option value="Grass">Planta</option>
+                                        <option value="Psychic">Psíquico</option>
+                                        <option value="Rock">Roca</option>                          
+                                        <option value="Ground">Tierra</option> 
+                                        <option value="Poison">Veneno</option>
+                                        <option value="Fairy">Magico</option>                          
+                                        <option value="Dark">Oscuro</option> 
+                                        <option value="Steel">Acero</option>
+                                </select>
+                        </li>               
+                </form>
+                        <!--FILTRO MÁS Y MENOS DÉBIL-->
+                        <li>
+                                <section id="filtro-mas-menos-debil" class="filtro-mas-menos-debil">
+                                        <button class="debilidad">
+                                                <img src="./imagenes/Fuerte.png" alt="" id="MENOSDEBI">
+                                                <label for="MENOSDEBI">Más fuerte</label>
+                                        </button>
+                                        <button class="debilidad">
+                                                <img src="./imagenes/Debil.png" alt="" id="MASDEBI">
+                                                <label for="MASDEBI">Más débil</label>
+                                        </button>
+                                </section>
+                        </li>
+                        <!--FILTRO TOP 10 MAYOR FRECUENCIA-->
+                        <li><p>Top 10</p></li>
+                        <li>
+                                <section id="filtro-frecuencia" class="filtro-frecuencia">
+                                                                        
+                                        <button class="frecuencia">
+                                                <img src="./imagenes/Mayor-Frecuencia.png" alt="Mayor Frecuencia" id="MAYORF">
+                                                <label for="MAYORF">Mayor Frecuencia</label>
+                                        </button>
+                                        <button class="frecuencia">
+                                                <img src="./imagenes/Menor-Frecuencia.png" alt="Menor Frecuencia" id="MENORF">
+                                                <label for="MENORF">Menor Frecuencia</label>
+                                        </button>
+                                </section>
+                        </li>
+                        <!--FILTRO POR TIPOS-->            
+                        <li><p>Tipos</p></li>
+                        <li>
+                        <section id="guia-tipos" class="guia-tipos">
+                                <button id="aire" class="btn-tipo"> 
+                                <img class="btn" src="./imagenes/aire.png" alt="Flying"><br>
+                                <label for="Flying">Aire</label>
+                                </button>
+                                <button id="electrico" class="btn-tipo"> 
+                                <img class="btn" src="./imagenes/electrico.png" alt="Electric"><br>
+                                <label for="Electric">Eléctrico</label>
+                                </button>
+                                <button id="agua" class="btn-tipo"> 
+                                        <img class="btn" src="./imagenes/agua.png" alt="Water"><br>
+                                        <label for="Water">Agua</label>
+                                </button>
+                                <button id="dragon" class="btn-tipo"> 
+                                        <img class="btn" src="./imagenes/dragon.png" alt="Dragon"><br>
+                                        <label for="Dragon">Dragón</label>
+                                </button>
+                                <button id="fantasma" class="btn-tipo"> 
+                                        <img class="btn" src="./imagenes/fantasma.png" alt="Ghost"><br>
+                                        <label for="Ghost">Fantasma</label>
+                                </button>
+                                <button id="tierra" class="btn-tipo"> 
+                                        <img class="btn" src="./imagenes/tierra.png" alt="Ground"><br>
+                                        <label for="Ground">Tierra</label>
+                                </button>
+                                <button id="fuego" class="btn-tipo"> 
+                                        <img class="btn" src="./imagenes/fuego.png" alt="Fire"><br>
+                                        <label for="Fire">Fuego</label>
+                                </button>
+                                <button id="insecto" class="btn-tipo"> 
+                                        <img class="btn" src="./imagenes/insecto.png" alt="Bug"><br>
+                                        <label for="Bug">Insecto</label>
+                                </button>
+                                <button id="lucha" class="btn-tipo"> 
+                                        <img class="btn" src="./imagenes/lucha.png" alt="Fighting"><br>
+                                        <label for="Fighting">Lucha</label>
+                                </button>
+                                <button id="normal" class="btn-tipo"> 
+                                        <img class="btn" src="./imagenes/normal.png" alt="Normal"><br>
+                                        <label for="Normal">Normal</label>
+                                </button>
+                                <button id="planta" class="btn-tipo"> 
+                                        <img class="btn" src="./imagenes/planta.png" alt="Grass"><br>
+                                        <label for="Grass">Planta</label>
+                                </button>
+                                <button id="hielo" class="btn-tipo"> 
+                                        <img class="btn" src="./imagenes/hielo.png" alt="Ice"><br>
+                                        <label for="Ice">Hielo</label>
+                                </button>
+                                <button id="psiquico" class="btn-tipo"> 
+                                        <img class="btn" src="./imagenes/psiquico.png" alt="Psychic"><br>
+                                        <label for="Psychic">Psíquico</label>
+                                </button>
+                                <button id="roca" class="btn-tipo"> 
+                                        <img class="btn" src="./imagenes/roca.png" alt="Rock"><br>
+                                        <label for="Rock">Roca</label>
+                                </button>
+                                <button id="veneno" class="btn-tipo"> 
+                                        <img class="btn" src="./imagenes/veneno.png" alt="Poison"><br>
+                                        <label for="Poison">Veneno</label>
+                                </button>
+                        </section>
+                        </li>
+                </ul>
+        </div>
+</header>
+<main>
         <div class="insertar-pokemones" id="insertar-pokemones"></div>   
-    </main> 
-   
-    <footer>
-      <a class="redes-sociales" href="https://www.facebook.com/PokemonGO/" title="Facebook PokemonGo" target="_blank"> <img src="./imagenes/facebook.png" alt="Facebook"> </a>
-      <a class="redes-sociales" href="https://www.instagram.com/pokemongoapp/" title="Instagram PokemonGo" target="_blank"> <img src="./imagenes/instagram.png" alt="Instagram"> </a>
-      <a class="redes-sociales" href="https://twitter.com/pokemongoapp?lang=es" title="Twitter PokemonGo" target="_blank"> <img src="./imagenes/twitter.png" alt="Twitter"> </a> 
-    </footer>    
-    <script type="module" src="main.js"></script>
-  </body>
+</main>   
+<footer>
+        <a class="redes-sociales" href="https://www.facebook.com/PokemonGO/" title="Facebook PokemonGo" target="_blank"> <img src="./imagenes/facebook.png" alt="Facebook"> </a>
+        <a class="redes-sociales" href="https://www.instagram.com/pokemongoapp/" title="Instagram PokemonGo" target="_blank"> <img src="./imagenes/instagram.png" alt="Instagram"> </a>
+        <a class="redes-sociales" href="https://twitter.com/pokemongoapp?lang=es" title="Twitter PokemonGo" target="_blank"> <img src="./imagenes/twitter.png" alt="Twitter"> </a> 
+</footer>
+        <script type="module" src="main.js"></script>
+</body>
 </html>
